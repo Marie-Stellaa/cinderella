@@ -1,0 +1,780 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #0a0a1a;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* ========== NAVBAR ========== */
+.main-navbar {
+  padding: 16px 32px;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: transparent;
+  transition: background 0.4s ease, backdrop-filter 0.4s ease;
+}
+
+.main-navbar.scrolled {
+  background: rgba(13, 13, 31, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+}
+
+.logo {
+  text-decoration: none;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.logo-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: lightpink;
+  letter-spacing: 1.5px;
+}
+
+/* ========== NAV PILL DESKTOP ========== */
+.nav-pill {
+  display: flex;
+  align-items: center;
+  background: lightpink;
+  border-radius: 50px;
+  padding: 8px 8px 8px 24px;
+  gap: 4px;
+}
+
+.nav-pill a {
+  font-family: 'Cormorant Garamond', serif;
+  color: black;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 8px 16px;
+  border-radius: 50px;
+  transition: background 0.2s;
+}
+
+.nav-pill a:hover {
+  background: rgba(255,255,255,0.3);
+  color: #333;
+}
+
+.nav-pill a.active {
+  position: relative;
+}
+
+.nav-pill a.active::after {
+  content: '•';
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 8px;
+  color: #333;
+}
+
+/* ========== DROPDOWN COLLECTIONS ========== */
+.nav-dropdown .dropdown-toggle {
+  font-family: 'Cormorant Garamond', serif;
+  color: black;
+  font-size: 15px;
+  padding: 8px 16px;
+  border-radius: 50px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.nav-dropdown .dropdown-toggle:hover,
+.nav-dropdown .dropdown-toggle:focus {
+  background: rgba(255,255,255,0.3);
+  color: #333;
+  box-shadow: none;
+  outline: none;
+}
+
+.nav-dropdown .dropdown-toggle::after {
+  border-top-color: black;
+  vertical-align: middle;
+}
+
+.nav-dropdown-menu {
+  background: #0d0d1f !important;
+  border: 1px solid rgba(255,182,193,0.25) !important;
+  border-radius: 4px !important;
+  padding: 8px 0 !important;
+  min-width: 160px;
+  margin-top: 8px !important;
+}
+
+.nav-dropdown-menu .dropdown-item {
+  font-family: 'Cormorant Garamond', serif;
+  color: rgba(255,255,255,0.85) !important;
+  font-size: 14px;
+  padding: 10px 20px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+
+.nav-dropdown-menu .dropdown-item:hover {
+  background: rgba(255,182,193,0.1) !important;
+  color: lightpink !important;
+}
+
+/* ========== BURGER BTN ========== */
+.burger-btn {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+}
+
+.burger-btn span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: lightpink;
+  transition: all 0.3s ease;
+}
+
+.burger-btn[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.burger-btn[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+.burger-btn[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ========== NAV PILL MOBILE ========== */
+@media (max-width: 991.98px) {
+  .nav-pill {
+    background: #0d0d1f;
+    border-radius: 0;
+    padding: 20px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    margin-top: 10px;
+    border-top: 1px solid rgba(255,182,193,0.2);
+  }
+
+  .nav-pill a {
+    color: #fff !important;
+    width: 100%;
+    padding: 14px 0 !important;
+    font-size: 17px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    border-radius: 0;
+  }
+
+  .nav-pill a:hover {
+    background: transparent !important;
+    color: lightpink !important;
+  }
+
+  .nav-dropdown {
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .nav-dropdown .dropdown-toggle {
+    color: #fff !important;
+    width: 100%;
+    padding: 14px 0;
+    font-size: 17px;
+    text-align: left;
+    border-radius: 0;
+  }
+
+  .nav-dropdown .dropdown-toggle::after {
+    border-top-color: #fff;
+    float: right;
+    margin-top: 10px;
+  }
+
+  .nav-dropdown-menu {
+    position: static !important;
+    transform: none !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 0 8px 16px !important;
+    margin-top: 0 !important;
+  }
+
+  .nav-dropdown-menu .dropdown-item {
+    color: rgba(255,255,255,0.6) !important;
+    padding: 10px 0 !important;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .nav-dropdown-menu .dropdown-item:hover {
+    background: transparent !important;
+    color: lightpink !important;
+  }
+
+  .search-btn {
+    margin-top: 16px;
+    margin-left: 0;
+  }
+}
+
+/* ========== SEARCH BTN ========== */
+.search-btn {
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.search-btn:hover { background: #f5c6cb; }
+
+.search-btn svg {
+  width: 18px;
+  height: 18px;
+  stroke: #333;
+  fill: none;
+  stroke-width: 2;
+}
+
+/* ========== HEADER VIDÉOS ========== */
+.header {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.header-col {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+.header-col:nth-child(1) { animation-delay: 0.2s; }
+.header-col:nth-child(2) { animation-delay: 0.5s; }
+.header-col:nth-child(3) { animation-delay: 0.8s; }
+
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.header-col video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.header-col::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(10,5,20,0.45);
+}
+
+.header-overlay-text {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  z-index: 10;
+  pointer-events: none;
+  width: 100%;
+  padding: 0 20px;
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fadeIn { to { opacity: 1; } }
+
+.header-main-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(40px, 7vw, 120px);
+  font-weight: 100;
+  letter-spacing: 16px;
+  color: pink;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.header-location {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  letter-spacing: 8px;
+  color: lightpink;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.header-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-style: italic;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 2px;
+}
+
+/* ========== TITRES DE SECTIONS ========== */
+.section-titre {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 4vw, 60px);
+  font-weight: 300;
+  color: #fff;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+/* ========== BOUTON PRINCIPAL ========== */
+.coll-btn {
+  display: inline-block;
+  border: 1px solid lightpink;
+  color: lightpink;
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 12px 30px;
+  font-family: 'Cormorant Garamond', serif;
+  transition: all 0.3s;
+  background: transparent;
+  cursor: pointer;
+}
+
+.coll-btn:hover {
+  background: lightpink;
+  color: #0a0a1a;
+}
+
+/* ========== BOUTON RETOUR ========== */
+.btn-retour {
+  position: relative;
+  top: 90px;
+  left: 24px;
+  z-index: 999;
+  color: lightpink;
+  text-decoration: none;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  border: 1px solid rgba(255,182,193,0.4);
+  padding: 8px 18px;
+  background: rgba(10,10,26,0.6);
+  backdrop-filter: blur(6px);
+  transition: all 0.3s;
+  display: inline-block;
+}
+
+.btn-retour:hover { background: lightpink; color: #0a0a1a; }
+
+/* ========== CARROUSEL ========== */
+.carr-height { height: 85vh; }
+
+.carr-img {
+  height: 85vh;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.carr-caption {
+  bottom: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  padding: 30px;
+}
+
+.carr-titre {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 5vw, 72px);
+  font-weight: 300;
+  letter-spacing: 10px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* ========== CARDS COLLECTIONS ========== */
+.coll-card {
+  background: #07071a;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  border-radius: 0 !important;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.coll-card:hover { transform: translateY(-8px); }
+
+.coll-card .card-img-top {
+  height: 500px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.coll-card:hover .card-img-top { transform: scale(1.05); }
+
+.coll-card .card-body { padding: 28px; text-align: center; background: #07071a; }
+
+.coll-card .card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.coll-card .card-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+/* ========== CARDS ROBES ========== */
+.robe-card {
+  background: #12122a !important;
+  border: 1px solid rgba(255,255,255,0.06) !important;
+  border-radius: 0 !important;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.robe-card:hover { transform: translateY(-6px); }
+
+.robe-card-img {
+  position: relative;
+  height: 420px;
+  overflow: hidden;
+}
+
+.robe-card-img img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease;
+}
+
+.robe-card-img .img-hover { opacity: 0; }
+.robe-card:hover .img-principal { opacity: 0; }
+.robe-card:hover .img-hover { opacity: 1; }
+
+.robe-card .card-body {
+  padding: 20px !important;
+  text-align: center;
+  background: #12122a;
+}
+
+.robe-card .card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff !important;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+}
+
+.robe-card .card-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 12px;
+  color: lightpink !important;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+/* ========== MODAL ROBE ========== */
+.modal-robe .modal-content {
+  background: #12122a;
+  border: 1px solid rgba(255,182,193,0.2);
+  border-radius: 0;
+}
+
+.modal-robe .modal-header {
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 20px 28px;
+}
+
+.modal-robe .btn-close {
+  filter: invert(1);
+  opacity: 0.6;
+}
+
+.modal-robe .modal-title {
+  font-family: 'Cormorant Garamond', serif;
+  color: #fff;
+  letter-spacing: 3px;
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.modal-robe .modal-body { padding: 0; }
+
+.modal-robe .modal-body img {
+  width: 100%;
+  max-height: auto;
+  object-fit: cover;
+  
+}
+
+.modal-robe .modal-body-text {
+  padding: 20px 28px;
+  font-family: 'Cormorant Garamond', serif;
+  color: rgba(255,255,255,0.65);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.modal-robe .modal-footer {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  justify-content: center;
+  padding: 16px 28px;
+}
+
+/* ========== CARDS VALEURS (À propos) ========== */
+.valeur-card {
+  background: #12122a !important;
+  border: 1px solid rgba(255,182,193,0.15) !important;
+  border-radius: 0 !important;
+  transition: transform 0.3s ease, border-color 0.3s;
+  text-align: center;
+  padding: 10px;
+}
+
+.valeur-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255,182,193,0.4) !important;
+}
+
+.valeur-card .card-body { background: #12122a; }
+
+.valeur-card .card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  color: #fff;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.valeur-card .card-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.8;
+}
+
+/* ========== ACCORDION FAQ ========== */
+.faq-accordion .accordion-item {
+  background: #12122a;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  border-radius: 0 !important;
+  margin-bottom: 8px;
+}
+
+.faq-accordion .accordion-button {
+  background: #12122a;
+  color: #fff;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 20px 24px;
+}
+
+.faq-accordion .accordion-button:not(.collapsed) {
+  background: rgba(255,182,193,0.08);
+  color: lightpink;
+}
+
+.faq-accordion .accordion-button::after {
+  filter: brightness(0) invert(1);
+}
+
+.faq-accordion .accordion-button:not(.collapsed)::after {
+  filter: brightness(0) saturate(100%) invert(79%) sepia(20%) saturate(500%) hue-rotate(300deg);
+}
+
+.faq-accordion .accordion-body {
+  background: #0d0d20;
+  color: rgba(255,255,255,0.65);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  line-height: 1.9;
+  padding: 20px 24px;
+}
+
+/* ========== FORMULAIRE CONTACT ========== */
+.contact-card {
+  display: flex;
+  gap: 18px;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.contact-icon { font-size: 22px; flex-shrink: 0; }
+
+.contact-card h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  color: #fff;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.contact-card p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.contact-card p a { color: lightpink; text-decoration: none; }
+
+.contact-form label {
+  font-family: 'Cormorant Garamond', serif;
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 4px;
+  color: #fff;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder { color: rgba(255,255,255,0.35); }
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: lightpink;
+  background: rgba(255,255,255,0.08);
+}
+
+.contact-form select option { background: #1a1a1a; color: #fff; }
+.contact-form textarea { resize: vertical; }
+
+/* ========== FOOTER ========== */
+.footer-v2 {
+  background: #050510;
+  padding: 90px 20px 0;
+  text-align: center;
+}
+
+.footer-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 600;
+  color: lightpink;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+
+.footer-link {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  padding-bottom: 4px;
+  transition: all 0.3s;
+}
+
+.footer-link:hover { color: lightpink; border-color: lightpink; }
+
+.footer-location {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  color: rgba(255,255,255,0.4);
+  margin-top: 8px;
+}
+
+.footer-bottom-v2 {
+  margin-top: 60px;
+  padding: 24px 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-bottom-v2 p {
+  font-size: 12px;
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.social-icon {
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255,182,193,0.3);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: lightpink;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.social-icon:hover {
+  background: lightpink;
+  color: #0a0a1a;
+  border-color: lightpink;
+}
+
+/* ========== RESPONSIVE (seulement ce que Bootstrap ne gère pas) ========== */
+@media (max-width: 768px) {
+  .header { flex-direction: column; height: 100vh; }
+  .header-col { height: 33.33vh; }
+  .header-location { font-size: 11px; letter-spacing: 4px; }
+  .header-quote { font-size: 14px; padding: 0 16px; }
+  .carr-height { height: 55vh; }
+  .carr-img { height: 55vh; }
+  .robe-card-img { height: 320px; }
+  .btn-retour { top: 70px; left: 16px; font-size: 12px; padding: 6px 14px; }
+  .coll-card .card-img-top { height: 320px; }
+}

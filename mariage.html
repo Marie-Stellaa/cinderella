@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinderella — Robes de Mariée</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="main-navbar navbar navbar-expand-lg">
+    <a class="logo" href="index.html">
+      <div class="logo-title">CINDERELLA</div>
+    </a>
+    <button class="burger-btn navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-expanded="false" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navContent">
+      <div class="nav-pill">
+        <a href="index.html">Accueil</a>
+        <div class="nav-dropdown dropdown">
+          <button class="dropdown-toggle active" data-bs-toggle="dropdown" aria-expanded="false">Collections</button>
+          <ul class="dropdown-menu nav-dropdown-menu">
+            <li><a class="dropdown-item" href="mariage.html">Mariage</a></li>
+            <li><a class="dropdown-item" href="soiree.html">Soirée</a></li>
+          </ul>
+        </div>
+        <a href="apropos.html">À propos</a>
+        <a href="contact.html">Contact</a>
+        <button class="search-btn" aria-label="Rechercher">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BOUTON RETOUR -->
+  <a href="index.html" class="btn-retour">← Retour</a>
+
+  <!-- CARROUSEL Bootstrap -->
+  <header id="carrousel-mariage" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carrousel-mariage" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#carrousel-mariage" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#carrousel-mariage" data-bs-slide-to="2"></button>
+    </div>
+    <div class="carousel-inner carr-height">
+      <div class="carousel-item carr-height active">
+        <img src="robe mariée 1.jpg" class="d-block w-100 carr-img" alt="Robe mariée 1">
+        <div class="carousel-caption carr-caption">
+          <p class="header-location">Collection Mariée</p>
+          <h1 class="carr-titre">Robes de Mariée</h1>
+          <p class="header-quote">Pour le plus beau jour de votre vie</p>
+        </div>
+      </div>
+      <div class="carousel-item carr-height">
+        <img src="robe mariée 2.jpg" class="d-block w-100 carr-img" alt="Robe mariée 2">
+      </div>
+      <div class="carousel-item carr-height">
+        <img src="robe mariée 3.jpg" class="d-block w-100 carr-img" alt="Robe mariée 3">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carrousel-mariage" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carrousel-mariage" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </header>
+
+  <!-- SECTION ROBES -->
+  <section style="padding: 100px 0; background: #0a0a1a;">
+    <div class="container">
+      <div class="text-center mb-5">
+        <p class="header-location">Notre sélection</p>
+        <h2 class="section-titre">Nos Robes de Mariée</h2>
+      </div>
+
+      <!-- Bootstrap Cards + modals -->
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+        <div class="col">
+          <div class="card robe-card h-100">
+            <div class="robe-card-img">
+              <img class="img-principal" src="robemariee1.0.jpg" alt="Robe Princesse">
+              <img class="img-hover" src="robemariee1.jpg" alt="Robe Princesse détail">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Robe Princesse</h5>
+              <h6 class="card-subtitle">Dentelle & Broderie</h6>
+              <button class="coll-btn w-100 mt-2" data-bs-toggle="modal" data-bs-target="#modal1">Voir les détails</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card robe-card h-100">
+            <div class="robe-card-img">
+              <img class="img-principal" src="robemariee2.0.jpg" alt="Robe Sirène">
+              <img class="img-hover" src="robemariee2.jpg" alt="Robe Sirène détail">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Robe Sirène</h5>
+              <h6 class="card-subtitle">Satin & Strass</h6>
+              <button class="coll-btn w-100 mt-2" data-bs-toggle="modal" data-bs-target="#modal2">Voir les détails</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card robe-card h-100">
+            <div class="robe-card-img">
+              <img class="img-principal" src="robemariee3.0.jpg" alt="Robe Boho">
+              <img class="img-hover" src="robemariee3.jpg" alt="Robe Boho détail">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Robe Boho</h5>
+              <h6 class="card-subtitle">Légèreté & Naturel</h6>
+              <button class="coll-btn w-100 mt-2" data-bs-toggle="modal" data-bs-target="#modal3">Voir les détails</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card robe-card h-100">
+            <div class="robe-card-img">
+              <img class="img-principal" src="robemariee4.0.jpg" alt="Robe Classique">
+              <img class="img-hover" src="robemariee4.jpg" alt="Robe Classique détail">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Robe Classique</h5>
+              <h6 class="card-subtitle">Élégance intemporelle</h6>
+              <button class="coll-btn w-100 mt-2" data-bs-toggle="modal" data-bs-target="#modal4">Voir les détails</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card robe-card h-100">
+            <div class="robe-card-img">
+              <img class="img-principal" src="robemariee5.0.jpg" alt="Robe Luxe">
+              <img class="img-hover" src="robemariee5.jpg" alt="Robe Luxe détail">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Robe Luxe</h5>
+              <h6 class="card-subtitle">Cristaux & Soie</h6>
+              <button class="coll-btn w-100 mt-2" data-bs-toggle="modal" data-bs-target="#modal5">Voir les détails</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card robe-card h-100">
+            <div class="robe-card-img">
+              <img class="img-principal" src="robemariee7.0.jpg" alt="Robe Moderne">
+              <img class="img-hover" src="robemariee7.jpg" alt="Robe Moderne détail">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Robe Moderne</h5>
+              <h6 class="card-subtitle">Minimalisme & Chic</h6>
+              <button class="coll-btn w-100 mt-2" data-bs-toggle="modal" data-bs-target="#modal6">Voir les détails</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MODALS Bootstrap -->
+  <div class="modal fade modal-robe" id="modal1" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Robe Princesse — Dentelle & Broderie</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><img src="robemariee1.jpg" alt="Robe Princesse"><div class="modal-body-text">Robe volumineuse aux broderies délicates, idéale pour une mariée qui veut incarner la féerie. Disponible en sur mesure.</div></div><div class="modal-footer"><a href="https://wa.me/2250777880000" target="_blank" class="coll-btn">Commander sur WhatsApp</a></div></div></div></div>
+
+  <div class="modal fade modal-robe" id="modal2" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Robe Sirène — Satin & Strass</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><img src="robemariee2.jpg" alt="Robe Sirène"><div class="modal-body-text">Coupe ajustée qui épouse les courbes avec grâce. Strass et satin pour un effet luxueux inoubliable.</div></div><div class="modal-footer"><a href="https://wa.me/2250777880000" target="_blank" class="coll-btn">Commander sur WhatsApp</a></div></div></div></div>
+
+  <div class="modal fade modal-robe" id="modal3" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Robe Boho — Légèreté & Naturel</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><img src="robemariee3.jpg" alt="Robe Boho"><div class="modal-body-text">Pour la mariée libre et naturelle. Dentelle fine, fleurs brodées et tissu léger pour une cérémonie en plein air.</div></div><div class="modal-footer"><a href="https://wa.me/2250777880000" target="_blank" class="coll-btn">Commander sur WhatsApp</a></div></div></div></div>
+
+  <div class="modal fade modal-robe" id="modal4" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Robe Classique — Élégance intemporelle</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><img src="robemariee4.jpg" alt="Robe Classique"><div class="modal-body-text">La robe de mariée classique par excellence. Blanche, pure, intemporelle. Pour une cérémonie solennelle et majestueuse.</div></div><div class="modal-footer"><a href="https://wa.me/2250777880000" target="_blank" class="coll-btn">Commander sur WhatsApp</a></div></div></div></div>
+
+  <div class="modal fade modal-robe" id="modal5" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Robe Luxe — Cristaux & Soie</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><img src="robemariee5.jpg" alt="Robe Luxe"><div class="modal-body-text">Le summum du luxe bridal. Cristaux Swarovski cousus à la main sur une soie naturelle d'exception. Une pièce unique.</div></div><div class="modal-footer"><a href="https://wa.me/2250777880000" target="_blank" class="coll-btn">Commander sur WhatsApp</a></div></div></div></div>
+
+  <div class="modal fade modal-robe" id="modal6" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Robe Moderne — Minimalisme & Chic</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><img src="robemariee7.jpg" alt="Robe Moderne"><div class="modal-body-text">Pour la mariée contemporaine. Lignes épurées, tissu premium, sans fioritures. Le chic à l'état pur.</div></div><div class="modal-footer"><a href="https://wa.me/2250777880000" target="_blank" class="coll-btn">Commander sur WhatsApp</a></div></div></div></div>
+
+  <!-- FOOTER -->
+  <footer class="footer-v2">
+    <h2 class="footer-title">Restons Connectés</h2>
+    <div class="d-flex flex-column align-items-center gap-2">
+      <a href="https://wa.me/2250777880000" class="footer-link">+225 07 77 88 00 00</a>
+      <p class="footer-location">Zone 4, Rue du Canal — Abidjan / Côte d'Ivoire</p>
+    </div>
+    <div class="d-flex justify-content-center gap-3 mt-4">
+      <a href="https://www.tiktok.com/@cinderella_abidjan" target="_blank" class="social-icon" title="TikTok">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/cinderella_abidjan" target="_blank" class="social-icon" title="Instagram">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a href="https://www.facebook.com/cinderellaabidjan" target="_blank" class="social-icon" title="Facebook">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+      </a>
+    </div>
+    <div class="footer-bottom-v2">
+      <p>© 2026 Cinderella Abidjan. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    window.addEventListener('scroll', () => {
+      document.querySelector('.main-navbar').classList.toggle('scrolled', window.scrollY > 50);
+    });
+  </script>
+
+</body>
+</html>

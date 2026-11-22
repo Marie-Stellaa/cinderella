@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinderella — Contact</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="padding-top: 80px;">
+
+  <!-- NAVBAR -->
+  <nav class="main-navbar navbar navbar-expand-lg scrolled">
+    <a class="logo" href="index.html">
+      <div class="logo-title">CINDERELLA</div>
+    </a>
+    <button class="burger-btn navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-expanded="false" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navContent">
+      <div class="nav-pill">
+        <a href="index.html">Accueil</a>
+        <div class="nav-dropdown dropdown">
+          <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Collections</button>
+          <ul class="dropdown-menu nav-dropdown-menu">
+            <li><a class="dropdown-item" href="mariage.html">Mariage</a></li>
+            <li><a class="dropdown-item" href="soiree.html">Soirée</a></li>
+          </ul>
+        </div>
+        <a href="apropos.html">À propos</a>
+        <a href="contact.html" class="active">Contact</a>
+        <button class="search-btn" aria-label="Rechercher">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- EN-TÊTE -->
+  <div class="text-center py-5">
+    <p class="header-location">Nous trouver</p>
+    <h1 class="section-titre">Contactez-nous</h1>
+    <p style="font-family:'Cormorant Garamond',serif; font-size:18px; color:lightpink; letter-spacing:2px; margin-top:12px;">
+      Bal & Bridal • Soirée, gala et mariage
+    </p>
+  </div>
+
+  <!-- SECTION CONTACT - Bootstrap Grid -->
+  <section class="container pb-5">
+    <div class="row g-5">
+
+      <!-- INFOS + FORMULAIRE -->
+      <div class="col-12 col-lg-6">
+
+        <div class="contact-card">
+          <div class="contact-icon">📍</div>
+          <div>
+            <h4>Adresse</h4>
+            <p>Cinderella, Zone 4, Rue du Canal,<br>Résidence Nevada, Abidjan, Côte d'Ivoire</p>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">📞</div>
+          <div>
+            <h4>Téléphone</h4>
+            <p><a href="tel:+2250777880000">07 77 88 00 00</a></p>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <h4>Horaires</h4>
+            <p>Ouvert tous les jours</p>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">🏷️</div>
+          <div>
+            <h4>Catégorie</h4>
+            <p>Boutique de robes de mariée (Bridal Shop)</p>
+          </div>
+        </div>
+
+        <!-- FORMULAIRE -->
+        <div class="mt-5">
+          <h4 style="font-family:'Cormorant Garamond',serif; color:#fff; font-size:16px; letter-spacing:2px; margin-bottom:20px; text-transform:uppercase;">
+            Envoyez-nous un message
+          </h4>
+
+          <form class="contact-form" id="contactForm" novalidate>
+
+            <div class="mb-3">
+              <label for="nom">Nom complet</label>
+              <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+              <div class="invalid-feedback" style="font-family:'Cormorant Garamond',serif; color:lightpink; font-size:13px;">
+                Veuillez entrer votre nom.
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="email">Adresse e-mail</label>
+              <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+              <div class="invalid-feedback" style="font-family:'Cormorant Garamond',serif; color:lightpink; font-size:13px;">
+                Veuillez entrer une adresse e-mail valide.
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="telephone">Téléphone</label>
+              <input type="tel" id="telephone" name="telephone" placeholder="07 00 00 00 00">
+            </div>
+
+            <div class="mb-3">
+              <label for="sujet">Sujet</label>
+              <select id="sujet" name="sujet" required>
+                <option value="">-- Choisir un sujet --</option>
+                <option value="mariage">Robe de mariée</option>
+                <option value="soiree">Robe de soirée</option>
+                <option value="rdv">Prise de rendez-vous</option>
+                <option value="autre">Autre</option>
+              </select>
+            </div>
+
+            <div class="mb-4">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Écrivez votre message ici..." required></textarea>
+              <div class="invalid-feedback" style="font-family:'Cormorant Garamond',serif; color:lightpink; font-size:13px;">
+                Veuillez écrire votre message.
+              </div>
+            </div>
+
+            <button type="submit" class="coll-btn w-100">Envoyer le message</button>
+
+            <p id="formStatus" class="text-center mt-3" style="font-family:'Cormorant Garamond',serif; font-size:15px; display:none;"></p>
+
+          </form>
+        </div>
+
+        <!-- WHATSAPP -->
+        <a href="https://wa.me/2250777880000" target="_blank" class="coll-btn d-block text-center mt-4">
+          Nous écrire sur WhatsApp
+        </a>
+
+        <!-- RÉSEAUX SOCIAUX -->
+        <div class="mt-5">
+          <h4 style="font-family:'Cormorant Garamond',serif; color:#fff; font-size:14px; letter-spacing:2px; margin-bottom:16px; text-transform:uppercase;">Suivez-nous</h4>
+          <div class="d-flex gap-3">
+            <a href="https://www.tiktok.com/@cinderella_abidjan" target="_blank" class="social-icon" title="TikTok">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/cinderella_abidjan" target="_blank" class="social-icon" title="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://www.facebook.com/cinderellaabidjan" target="_blank" class="social-icon" title="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- GOOGLE MAPS -->
+      <div class="col-12 col-lg-6">
+        <iframe
+          src="https://www.google.com/maps?q=Cinderella+Zone+4+Rue+du+Canal+Résidence+Nevada+Abidjan&output=embed"
+          width="100%"
+          height="500"
+          style="border:1px solid rgba(255,255,255,0.1); filter:grayscale(0.3) invert(0.9) contrast(0.9);"
+          allowfullscreen=""
+          loading="lazy">
+        </iframe>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-v2">
+    <h2 class="footer-title">Restons Connectés</h2>
+    <div class="d-flex flex-column align-items-center gap-2">
+      <a href="https://wa.me/2250777880000" class="footer-link">+225 07 77 88 00 00</a>
+      <p class="footer-location">Zone 4, Rue du Canal — Abidjan / Côte d'Ivoire</p>
+    </div>
+    <div class="d-flex justify-content-center gap-3 mt-4">
+      <a href="https://www.tiktok.com/@cinderella_abidjan" target="_blank" class="social-icon" title="TikTok">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/cinderella_abidjan" target="_blank" class="social-icon" title="Instagram">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a href="https://www.facebook.com/cinderellaabidjan" target="_blank" class="social-icon" title="Facebook">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+      </a>
+    </div>
+    <div class="footer-bottom-v2">
+      <p>© 2026 Cinderella Abidjan. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    window.addEventListener('scroll', () => {
+      document.querySelector('.main-navbar').classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Validation + soumission formulaire
+    const form = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!form.checkValidity()) {
+        form.classList.add('was-validated');
+        
+        form.querySelectorAll('input, select, textarea').forEach(el => {
+          if (!el.validity.valid) {
+            el.style.borderColor = 'lightpink';
+          } else {
+            el.style.borderColor = 'rgba(255,255,255,0.15)';
+          }
+        });
+        return;
+      }
+      formStatus.style.display = 'block';
+      formStatus.style.color = '#4caf50';
+      formStatus.textContent = 'Merci ! Votre message a bien été envoyé.';
+      form.reset();
+      form.classList.remove('was-validated');
+      setTimeout(() => { formStatus.style.display = 'none'; }, 5000);
+    });
+  </script>
+
+</body>
+</html>

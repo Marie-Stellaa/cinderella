@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinderella — À propos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="main-navbar navbar navbar-expand-lg scrolled">
+    <a class="logo" href="index.html">
+      <div class="logo-title">CINDERELLA</div>
+    </a>
+
+    <button class="burger-btn navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-expanded="false" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navContent">
+      <div class="nav-pill">
+        <a href="index.html">Accueil</a>
+        <div class="nav-dropdown dropdown">
+          <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Collections</button>
+          <ul class="dropdown-menu nav-dropdown-menu">
+            <li><a class="dropdown-item" href="mariage.html">Mariage</a></li>
+            <li><a class="dropdown-item" href="soiree.html">Soirée</a></li>
+          </ul>
+        </div>
+        <a href="apropos.html" class="active">À propos</a>
+        <a href="contact.html">Contact</a>
+        <button class="search-btn" aria-label="Rechercher">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section style="padding: 160px 0 80px; background: #07071a; text-align: center;">
+    <div class="container">
+      <p class="header-location">Notre histoire</p>
+      <h1 class="section-titre mb-4">À propos de nous</h1>
+      <p style="font-family:'Cormorant Garamond',serif; font-size:20px; font-style:italic; color:rgba(255,255,255,0.5); letter-spacing:2px;">
+        « Chaque femme mérite de se sentir princesse »
+      </p>
+    </div>
+  </section>
+
+  <!-- HISTOIRE -->
+  <section style="padding: 80px 0; background: #0a0a1a;">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-12 col-lg-5">
+          <img src="robemariee1.jpg" alt="Cinderella Abidjan" style="width:100%; height:520px; object-fit:cover; object-position:top;">
+        </div>
+        <div class="col-12 col-lg-7">
+          <p class="header-location mb-3">Qui sommes-nous</p>
+          <h2 class="section-titre mb-4">Notre histoire</h2>
+          <p style="font-family:'Cormorant Garamond',serif; font-size:17px; color:rgba(255,255,255,0.65); line-height:2; margin-bottom:20px;">
+            Fondée à Bietry, dans le quartier chic d'Abidjan, <strong style="color:lightpink;">Cinderella</strong> est née d'une passion profonde pour la mode et l'élégance féminine. Notre fondatrice, elle-même passionnée de haute couture, a voulu créer un espace où chaque femme ivoirienne pourrait trouver la robe de ses rêves.
+          </p>
+          <p style="font-family:'Cormorant Garamond',serif; font-size:17px; color:rgba(255,255,255,0.65); line-height:2; margin-bottom:20px;">
+            Depuis notre ouverture, nous avons eu le privilège d'accompagner des centaines de femmes dans leurs moments les plus importants — mariages, soirées de gala, cérémonies et événements d'exception.
+          </p>
+          <p style="font-family:'Cormorant Garamond',serif; font-size:17px; color:rgba(255,255,255,0.65); line-height:2; margin-bottom:36px;">
+            Aujourd'hui, Cinderella est devenue une référence incontournable de la mode féminine à Abidjan, reconnue pour la qualité de ses créations et la chaleur de son accueil.
+          </p>
+          <a href="contact.html" class="coll-btn">Prendre rendez-vous</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOS VALEURS — Bootstrap Cards -->
+  <section style="padding: 80px 0; background: #07071a;">
+    <div class="container">
+      <div class="text-center mb-5">
+        <p class="header-location">Ce qui nous définit</p>
+        <h2 class="section-titre">Nos valeurs</h2>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+
+        <div class="col">
+          <div class="card valeur-card h-100">
+            <div class="card-body py-4">
+              <div style="font-size:36px; color:lightpink; margin-bottom:16px;">✦</div>
+              <h5 class="card-title">Élégance</h5>
+              <p class="card-text">Chaque robe de notre collection est sélectionnée selon des critères d'excellence. Nous ne proposons que des pièces qui allient beauté, qualité et raffinement.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card valeur-card h-100">
+            <div class="card-body py-4">
+              <div style="font-size:36px; color:lightpink; margin-bottom:16px;">✦</div>
+              <h5 class="card-title">Sur mesure</h5>
+              <p class="card-text">Parce que chaque femme est unique, nous offrons un service de personnalisation complet. Couleur, coupe, broderies — votre robe est ajustée à votre morphologie et vos désirs.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card valeur-card h-100">
+            <div class="card-body py-4">
+              <div style="font-size:36px; color:lightpink; margin-bottom:16px;">✦</div>
+              <h5 class="card-title">Accompagnement</h5>
+              <p class="card-text">Notre équipe est à votre écoute du début à la fin. De la première consultation au jour J, nous vous guidons avec bienveillance pour que vous brilliez comme vous le méritez.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ — Bootstrap Accordion -->
+  <section style="padding: 80px 0; background: #0a0a1a;">
+    <div class="container">
+      <div class="text-center mb-5">
+        <p class="header-location">Vos questions</p>
+        <h2 class="section-titre">Questions fréquentes</h2>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-8">
+          <div class="accordion faq-accordion" id="faqAccordion">
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true">
+                  Comment prendre rendez-vous chez Cinderella ?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Vous pouvez nous contacter directement via notre formulaire de contact, par téléphone au 07 77 88 00 00, ou en nous écrivant sur WhatsApp. Nous vous répondrons dans les 24 heures pour fixer un rendez-vous selon vos disponibilités.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false">
+                  Proposez-vous des robes sur mesure ?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Oui, absolument. Toutes nos robes peuvent être ajustées à vos mesures. Nous proposons également un service de personnalisation complète : couleur, tissu, broderies, décolleté. Tout est possible pour que votre robe soit unique.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false">
+                  Quels sont vos délais de confection ?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Les délais varient selon la complexité de la robe. En général, comptez 2 à 4 semaines pour des ajustements simples, et 6 à 8 semaines pour une confection complète sur mesure. Nous vous conseillons de nous contacter le plus tôt possible.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false">
+                  Est-il possible de louer une robe ?
+                </button>
+              </h2>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Oui, nous proposons également un service de location pour certaines pièces de notre collection soirée. Contactez-nous pour connaître les robes disponibles à la location et nos tarifs.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false">
+                  Où êtes-vous situés ?
+                </button>
+              </h2>
+              <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Notre boutique est située Zone 4, Rue du Canal, Résidence Nevada, Abidjan. Nous sommes ouverts tous les jours. Retrouvez notre adresse exacte et l'itinéraire sur notre page Contact.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-v2">
+    <h2 class="footer-title">Restons Connectés</h2>
+    <div class="d-flex flex-column align-items-center gap-2">
+      <a href="https://wa.me/2250777880000" class="footer-link">+225 07 77 88 00 00</a>
+      <p class="footer-location">Zone 4, Rue du Canal — Abidjan / Côte d'Ivoire</p>
+    </div>
+    <div class="d-flex justify-content-center gap-3 mt-4">
+      <a href="https://www.tiktok.com/@cinderella_abidjan" target="_blank" class="social-icon" title="TikTok">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/cinderella_abidjan" target="_blank" class="social-icon" title="Instagram">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a href="https://www.facebook.com/cinderellaabidjan" target="_blank" class="social-icon" title="Facebook">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+      </a>
+    </div>
+    <div class="footer-bottom-v2">
+      <p>© 2026 Cinderella Abidjan. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    window.addEventListener('scroll', () => {
+      document.querySelector('.main-navbar').classList.toggle('scrolled', window.scrollY > 50);
+    });
+  </script>
+
+</body>
+</html>
